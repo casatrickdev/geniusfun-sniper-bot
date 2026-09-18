@@ -6,7 +6,7 @@ Built for traders and developers who want to automate Genius.fun token launch mo
 
 > ⚠️ This project is for research, development, and automated trading experiments. Cryptocurrency trading involves significant financial risk.
 
-## Why a Genius.fun Sniper Bot?
+## what makes this Genius.fun Sniper Bot unique?
 
 New token launches can move quickly.
 
@@ -50,7 +50,11 @@ The idea is simple:
 
 ---
 
+
+
 ## Who Is This For?
+
+
 
 ### Active Genius.fun Traders
 
@@ -66,19 +70,21 @@ For developers building custom BNB Chain trading infrastructure, launch monitors
 
 ### Trading Infrastructure Projects
 
-This repository can be extended into a custom:
+This repository is being extended into a custom:
 
-* Genius.fun trading bot
-* BNB Chain sniper bot
-* token launch monitor
-* automated entry system
-* automated exit system
-* on-chain trading system
-* trading dashboard
+- Genius.fun trading bot
+- BNB Chain (four.meme) sniper bot
+- token launch monitor
+- automated entry system
+- automated exit system
+- on-chain trading system
+- trading dashboard
 
 ---
 
+
 ## Features
+
 
 ### New Token Detection
 
@@ -122,6 +128,8 @@ the workflow becomes:
 Signal → Validation → Execution
 ```
 
+
+
 ### Slippage Control
 
 Fast-moving token markets can change significantly between detecting an opportunity and executing a transaction.
@@ -131,6 +139,8 @@ Configure a maximum acceptable slippage:
 ```env
 MAX_SLIPPAGE_BPS=500
 ```
+
+
 
 ### Position Sizing
 
@@ -142,6 +152,8 @@ Example:
 BUY_AMOUNT_BNB=0.10
 MAX_POSITION_BNB=0.25
 ```
+
+
 
 ### Risk Controls
 
@@ -160,6 +172,8 @@ Token blocklist
 Cooldown period
 Emergency stop
 ```
+
+
 
 ### Automated Exits
 
@@ -207,7 +221,9 @@ This makes the bot easier to debug and monitor.
 
 ---
 
-## Example Strategy
+
+
+## Basic Strategy
 
 A basic Genius.fun sniper strategy could work like this:
 
@@ -244,6 +260,8 @@ This makes it easier to change the trading strategy without rebuilding the entir
 
 ---
 
+
+
 ## Example Configuration
 
 ```env
@@ -276,30 +294,6 @@ MAX_HOLD_TIME_MINUTES=30
 DRY_RUN=true
 EMERGENCY_STOP=false
 ```
-
----
-
-## Dry Run Mode
-
-Before using real funds, run the bot in dry-run mode:
-
-```env
-DRY_RUN=true
-```
-
-This allows you to inspect:
-
-```text
-Detected tokens
-Triggered signals
-Rejected tokens
-Position sizes
-Execution parameters
-Exit decisions
-Transaction flow
-```
-
-without immediately submitting live trades.
 
 ---
 
@@ -337,27 +331,31 @@ The components can be developed independently, making it easier to add new strat
 
 ---
 
+
+
 ## Performance Considerations
 
 For launch trading, the strategy is only one part of the system.
 
 Execution can also depend on:
 
-* RPC latency
-* WebSocket reliability
-* transaction propagation
-* gas configuration
-* quote freshness
-* slippage
-* confirmation handling
-* retry logic
-* RPC failover
-* rate limits
-* uptime
+- RPC latency
+- WebSocket reliability
+- transaction propagation
+- gas configuration
+- quote freshness
+- slippage
+- confirmation handling
+- retry logic
+- RPC failover
+- rate limits
+- uptime
 
 A strategy can look good in testing and still behave differently when real transactions, latency, liquidity, and network conditions are involved.
 
 ---
+
+
 
 ## Monitoring Example
 
@@ -378,6 +376,8 @@ A useful execution log could look like:
 Good logging is important when debugging automated trading systems.
 
 ---
+
+
 
 ## Security
 
@@ -404,12 +404,14 @@ For live trading, use a dedicated wallet and avoid storing long-term assets in t
 
 ---
 
+
+
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/geniusfun-sniper-bot.git
+git clone https://github.com/casatrickdev/geniusfun-sniper-bot.git
 cd geniusfun-sniper-bot
 ```
 
@@ -427,13 +429,14 @@ cp .env.example .env
 
 Configure your RPC endpoint, wallet, strategy parameters, and trading settings.
 
-Start in dry-run mode:
 
 ```bash
 npm run dev
 ```
 
 ---
+
+
 
 ## Project Structure
 
@@ -459,52 +462,57 @@ geniusfun-sniper-bot/
 
 ---
 
-## Possible Strategies
+
+
+## Strategies
 
 The same infrastructure can support different Genius.fun and BNB Chain strategies, including:
 
-* New-token sniping
-* Launch monitoring
-* Liquidity-based entries
-* Volume-based entries
-* Momentum strategies
-* Wallet-following strategies
-* Token allowlists
-* Token blocklists
-* Automated take-profit
-* Automated stop-loss
-* Trailing exits
-* Time-based exits
-* Multi-wallet execution
-* RPC failover
-* Telegram notifications
-* PnL tracking
-* Trading dashboards
+- New-token sniping
+- Launch monitoring
+- Liquidity-based entries
+- Volume-based entries
+- Momentum strategies
+- Wallet-following strategies
+- Token allowlists
+- Token blocklists
+- Automated take-profit
+- Automated stop-loss
+- Trailing exits
+- Time-based exits
+- Multi-wallet execution
+- RPC failover
+- Telegram notifications
+- PnL tracking
+- Trading dashboards
 
 ---
+
+
 
 ## Roadmap
 
-* [ ] Genius.fun launch monitoring
-* [ ] New token detection
-* [ ] Configurable entry filters
-* [ ] Automated buy execution
-* [ ] Slippage controls
-* [ ] Position sizing
-* [ ] Stop-loss
-* [ ] Take-profit
-* [ ] Trailing stop
-* [ ] Dry-run mode
-* [ ] Transaction monitoring
-* [ ] Trade history
-* [ ] PnL tracking
-* [ ] Telegram alerts
-* [ ] Multi-wallet support
-* [ ] RPC failover
-* [ ] Web dashboard
-* [ ] Strategy backtesting
+- [ ] Genius.fun launch monitoring
+- [ ] New token detection
+- [ ] Configurable entry filters
+- [ ] Automated buy execution
+- [ ] Slippage controls
+- [ ] Position sizing
+- [ ] Stop-loss
+- [ ] Take-profit
+- [ ] Trailing stop
+- [ ] Transaction monitoring
+- [ ] Trade history
+- [ ] PnL tracking
+- [ ] Telegram alerts
+- [ ] Multi-wallet support
+- [ ] RPC failover
+- [ ] Web dashboard
+- [ ] Strategy backtesting
 
 ---
+
+
 
 ## Why Automate Genius.fun Trading?
 
@@ -540,6 +548,8 @@ It is turning a trading strategy into a repeatable automated workflow.
 
 ---
 
+
+
 ## Custom Genius.fun Bot Development
 
 This repository can be extended for custom requirements such as:
@@ -562,6 +572,8 @@ For teams or traders with a specific Genius.fun strategy, the same architecture 
 
 ---
 
+
+
 ## Disclaimer
 
 This project is not financial advice.
@@ -572,11 +584,15 @@ Use this software at your own risk and only trade funds you can afford to lose.
 
 ---
 
+
+
 ## SEO Keywords
 
 Genius.fun sniper bot, Genius.fun trading bot, Genius.fun bot, Genius.fun sniper, Genius fun bot, Genius fun trading bot, BNB Chain sniper bot, BNB sniper bot, crypto sniper bot, token sniper bot, new token sniper, launchpad sniper bot, automated crypto trading bot, BNB Chain trading bot, on-chain trading bot, token launch bot, crypto trading automation, DeFi trading bot, Web3 trading bot, automated token trading, blockchain trading bot.
 
 ---
+
+
 
 ## GitHub Topics
 
@@ -599,3 +615,4 @@ onchain
 crypto-trading
 blockchain
 ```
+
